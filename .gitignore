@@ -12,11 +12,15 @@ env/
 # Jupyter Notebook
 .ipynb_checkpoints
 
-# Data files (exclude large CSV and Excel files)
-*.csv
-*.xlsx
-*.xls
-*.pdf
+# Data files - exclude output files but allow data folders
+# Exclude output Excel files in root directory
+*_eligible_locations.xlsx
+eligible_locations.xlsx
+eligible_locations.csv
+~$*.xlsx
+
+# Allow data folders (OFLC_Wages_*)
+!OFLC_Wages_*/
 
 # OS
 .DS_Store
