@@ -63,7 +63,7 @@ All settings are controlled through `config.yaml`. Edit this file to customize y
 
 ```yaml
 # Your hourly wage (in USD)
-hourly_wage: 64.9
+hourly_wage: 80.0
 
 # Wage level to compare against (L1, L2, L3, or L4)
 # L1 = Entry Level
@@ -88,7 +88,7 @@ The OFLC provides four wage levels for each occupation and location:
 - **L3 (Level 3)**: Experienced level - for workers with significant experience
 - **L4 (Level 4)**: Fully competent level - for workers with full proficiency
 
-**Important**: The tool finds locations where your hourly wage **meets or exceeds** the selected level. For example, if you set `wage_level: "L4"` and `hourly_wage: 64.9`, you'll get all locations where L4 wage is ≤ $64.90/hour.
+**Important**: The tool finds locations where your hourly wage **meets or exceeds** the selected level. For example, if you set `wage_level: "L4"` and `hourly_wage: 80.0`, you'll get all locations where L4 wage is ≤ $80.00/hour.
 
 ## Usage
 
@@ -109,7 +109,7 @@ The OFLC provides four wage levels for each occupation and location:
 
 3. **Find your results** in the `output/` folder:
    ```
-   output/OFLC_Wages_2024-25_eligible_locations.xlsx
+   output/OFLC_Wages_2025-26_Updated_eligible_locations.xlsx
    ```
 
 ### Advanced Usage
@@ -162,43 +162,45 @@ LOC ELIGIBILITY ANALYSIS
 ======================================================================
 ✓ Configuration loaded from config.yaml
 ✓ Configuration validated
-  - Hourly wage: $64.9
+  - Hourly wage: $80.0
   - Wage level: L4
   - SOC code: 15-1299
-  - Data year: 2024-25
+  - Data year: 2025-26_Updated
 ✓ Data files located:
-  - ALC: /path/to/data/OFLC_Wages_2024-25/ALC_Export.csv
-  - Geography: /path/to/data/OFLC_Wages_2024-25/Geography.csv
+  - ALC: /path/to/data/OFLC_Wages_2025-26_Updated/ALC_Export.csv
+  - Geography: /path/to/data/OFLC_Wages_2025-26_Updated/Geography.csv
 
 Loading data files...
-✓ Loaded ALC data: 451,984 rows, 9 columns
+✓ Loaded ALC data: 449,440 rows, 9 columns
 ✓ Loaded Geography data
+  Geography data: 3,275 rows, 5 columns
 
 Filtering data...
-✓ Found 533 locations with SOC code '15-1299'
-✓ Found 478 locations where $64.9 >= Level4
+✓ Found 530 locations with SOC code '15-1299'
+✓ Found 392 locations where $80.0 >= Level4
 
-Level4 statistics for SOC 15-1299:
-  Min:  $29.09
-  25th: $46.72
-  50th: $51.57
-  75th: $57.86
-  Max:  $146.15
+Level4 wage statistics for SOC 15-1299:
+  Min:  $29.95
+  25th: $49.08
+  Median: $54.64
+  75th: $60.70
+  Max:  $107.28
+  Your wage ($80.0) is at the 95.3rd percentile
 
 Merging with geography data...
-✓ Merged data: 4,175 rows
+✓ Merged data: 2,505 rows
 
 Exporting results...
-✓ Exported to Excel: output/OFLC_Wages_2024-25_eligible_locations.xlsx
+✓ Exported to Excel: output/OFLC_Wages_2025-26_Updated_eligible_locations.xlsx
 
 ======================================================================
 ANALYSIS COMPLETE
 ======================================================================
-Total eligible locations: 4,175
+Total eligible locations: 2,505
 SOC Code: 15-1299
-Hourly Wage: $64.9
+Hourly Wage: $80.0
 Wage Level: L4
-Output file: output/OFLC_Wages_2024-25_eligible_locations.xlsx
+Output file: output/OFLC_Wages_2025-26_Updated_eligible_locations.xlsx
 ======================================================================
 ```
 

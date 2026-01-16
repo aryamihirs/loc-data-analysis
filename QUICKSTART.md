@@ -23,7 +23,7 @@ Edit `config.yaml`:
 
 ```yaml
 # Set your hourly wage
-hourly_wage: 64.9
+hourly_wage: 80.0
 
 # Choose wage level: L1, L2, L3, or L4
 wage_level: "L4"
