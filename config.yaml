@@ -1,0 +1,84 @@
+# LOC Eligibility Analysis Configuration
+# This file controls all parameters for the location eligibility analysis
+
+# ============================================================================
+# WAGE CONFIGURATION
+# ============================================================================
+
+# Your hourly wage (in USD per hour)
+# This is the salary you want to compare against location wage levels
+hourly_wage: 64.9
+
+# Wage level to use for comparison (choose one: L1, L2, L3, L4)
+# L1 = Level 1 (Entry Level)
+# L2 = Level 2 (Qualified Level)
+# L3 = Level 3 (Experienced Level)
+# L4 = Level 4 (Fully Competent Level)
+wage_level: "L4"
+
+# ============================================================================
+# DATA SOURCE CONFIGURATION
+# ============================================================================
+
+# Which OFLC wage data to use (year/version)
+# Available options based on your data folders:
+#   - "2023-24"
+#   - "2024-25"
+#   - "2025-26_Updated"
+data_year: "2025-26_Updated"
+
+# ============================================================================
+# FILTERING CONFIGURATION
+# ============================================================================
+
+# SOC (Standard Occupational Classification) code to filter
+# Example: "15-1299" for Computer Occupations, All Other
+soc_code: "15-1299"
+
+# ============================================================================
+# FILE PATHS (AUTO-GENERATED - Usually no need to change)
+# ============================================================================
+
+# These paths are constructed automatically based on data_year
+# But you can override them if you have a different file structure
+paths:
+  # Main data directory
+  data_dir: "data"
+
+  # Output directory for results
+  output_dir: "output"
+
+  # Specific file names within the data folder
+  # If null, will use default names: ALC_Export.csv and Geography.csv
+  alc_file: "ALC_Export.csv"
+  geography_file: "Geography.csv"
+
+# ============================================================================
+# OUTPUT CONFIGURATION
+# ============================================================================
+
+output:
+  # Output file format (excel or csv)
+  format: "excel"
+
+  # Include timestamp in output filename
+  include_timestamp: false
+
+  # Columns to include in output (null = all columns)
+  # Available columns: Area, AreaName, StateAb, State, CountyTownName,
+  #                   SocCode, Level1, Level2, Level3, Level4, Average, Label
+  columns: null
+
+# ============================================================================
+# ADVANCED OPTIONS
+# ============================================================================
+
+advanced:
+  # Comparison operator for wage filtering
+  # Options: ">=" (greater than or equal), ">" (greater than),
+  #          "<=" (less than or equal), "<" (less than)
+  comparison_operator: ">="
+
+  # CSV encoding to try (for Geography.csv files with encoding issues)
+  # Options: ["utf-8", "latin-1", "iso-8859-1", "cp1252", "windows-1252"]
+  csv_encodings: ["utf-8", "latin-1", "iso-8859-1", "cp1252", "windows-1252"]

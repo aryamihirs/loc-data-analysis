@@ -12,15 +12,20 @@ env/
 # Jupyter Notebook
 .ipynb_checkpoints
 
-# Data files - exclude output files but allow data folders
-# Exclude output Excel files in root directory
+# Output files - exclude all generated results
+output/
 *_eligible_locations.xlsx
+*_eligible_locations.csv
 eligible_locations.xlsx
 eligible_locations.csv
 ~$*.xlsx
 
-# Allow data folders (OFLC_Wages_*)
-!OFLC_Wages_*/
+# Allow data folders but track their structure
+!data/
+!data/OFLC_Wages_*/
+
+# Configuration - track config.yaml but allow local overrides
+config.local.yaml
 
 # OS
 .DS_Store
